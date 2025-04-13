@@ -3,7 +3,7 @@ import { createContext, useState, useEffect, useContext } from "react";
 const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
-    const supportedLanguages = ["en", "es", "de", "fr"];
+    const supportedLanguages = ["en", "es", "fr", "de"];
 
     const getDefaultLanguage = () => {
         const browserLanguage = navigator.language.slice(0, 2);
