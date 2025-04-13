@@ -3,19 +3,27 @@ import { createContext, useState, useEffect, useContext } from "react";
 const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
+    const supportedLanguages = ["en", "es", "de", "fr"];
+
     const getDefaultLanguage = () => {
-        const browserLanguage = navigator.language || navigator.userLanguage;
-        return browserLanguage.startsWith("es") ? "es" : "en";
+        const browserLanguage = navigator.language.slice(0, 2);
+        return supportedLanguages.includes(browserLanguage)
+            ? browserLanguage
+            : "en";
     };
 
     const [language, setLanguage] = useState(getDefaultLanguage);
 
     const toggleLanguage = () => {
-        setLanguage((prevLang) => (prevLang === "es" ? "en" : "es"));
+        const currentIndex = supportedLanguages.indexOf(language);
+        const nextIndex = (currentIndex + 1) % supportedLanguages.length;
+        setLanguage(supportedLanguages[nextIndex]);
     };
 
     return (
-        <LanguageContext.Provider value={{ language, toggleLanguage }}>
+        <LanguageContext.Provider
+            value={{ language, setLanguage, toggleLanguage }}
+        >
             {children}
         </LanguageContext.Provider>
     );

@@ -8,7 +8,7 @@ import presentacion2 from '../../assets/presentacion2.png';
 import presentacion3 from '../../assets/presentacion3.png';
 import presentacion4 from '../../assets/presentacion4.png';
 import { Link } from "react-scroll";
-import { useLanguage } from "../../LanguageContext"; // Import context
+import { useLanguage } from "../../LanguageContext";
 
 const imageArray = [presentacion1, presentacion2, presentacion3, presentacion4];
 
@@ -24,6 +24,31 @@ const Presentacion = () => {
         return () => clearInterval(interval);
     }, []);
 
+    const translations = {
+        es: {
+            title: "Tu amigo de TI",
+            description: "Resuelve tus problemas con la ayuda de tu amigo de TI",
+            button: "¡Contrátame!"
+        },
+        en: {
+            title: "Your TI friend",
+            description: "Solve your problems with the help of your TI friend",
+            button: "Hire me!"
+        },
+        de: {
+            title: "Dein IT-Freund",
+            description: "Löse deine Probleme mit der Hilfe deines IT-Freundes",
+            button: "Stell mich ein!"
+        },
+        fr: {
+            title: "Ton ami en TI",
+            description: "Résous tes problèmes avec l'aide de ton ami en TI",
+            button: "Embauche-moi !"
+        }
+    };
+
+    const t = translations[language];
+
     return (
         <div 
             className='presentacion container'
@@ -34,17 +59,10 @@ const Presentacion = () => {
                 transition: 'background-image 1s ease-in-out'
             }}
         >
-            
             <div className='presentacion-texto'>
                 <img src={logo} alt="Logo" style={{ width: '80%', height: 'auto' }} />
-                <h1>
-                    {language === "es" ? "Tu amigo de TI" : "Your TI friend"}
-                </h1>
-                <p>
-                    {language === "es"
-                        ? "Resuelve tus problemas con la ayuda de tu amigo de TI"
-                        : "Solve your problems with the help of your TI friend"}
-                </p>
+                <h1>{t.title}</h1>
+                <p>{t.description}</p>
                 <p>
                     <Link
                         to="planes"
@@ -53,7 +71,7 @@ const Presentacion = () => {
                         duration={500}
                         className="btn"
                     >
-                        {language === "es" ? "¡Contratame!" : "Hire me!"}
+                        {t.button}
                         <img src={flecha_oscura} alt='' />
                     </Link>
                 </p>
@@ -61,10 +79,8 @@ const Presentacion = () => {
             <div className='presentacion-foto'>
                 <img src={emi} alt="Emi" className="presentacion-foto-img" />
             </div>
-
-
         </div>
     );
-}
+};
 
 export default Presentacion;

@@ -30,6 +30,15 @@ const Galeria = () => {
         setSelectedImage(null);
     };
 
+    const translations = {
+        watchMore: {
+            es: "Ver más",
+            en: "Watch more",
+            de: "Mehr ansehen",
+            fr: "Voir plus"
+        }
+    };
+
     return (
         <div className="galeria">
             <div className="gallery">
@@ -48,7 +57,7 @@ const Galeria = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
             >
-                {language === "es" ? "Ver más" : "Watch more"} <img src={flechaBlanca} alt="Flecha blanca" />
+                {translations.watchMore[language]} <img src={flechaBlanca} alt="Flecha blanca" />
             </a>
             {selectedImage && (
                 <div className="modal" onClick={closeModal}>

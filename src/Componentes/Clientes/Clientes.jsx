@@ -23,7 +23,30 @@ const clientesData = {
     { img: FotoCli4, name: "Pa'tours", slogan: "Travel with class and style!" },
     { img: UserIcon, name: "Client Name", slogan: "Client slogan" },
     { img: UserIcon, name: "Client Name", slogan: "Client slogan" }
+  ],
+  de: [
+    { img: FotoCli1, name: "William Shakespeare Schule", slogan: "Bildung mit einem Lächeln" },
+    { img: FotoCli2, name: "Sichere Alarmierung", slogan: "Für eine sichere Gemeinschaft" },
+    { img: FotoCli3, name: "Sorelu Garten", slogan: "Feiere wie zu Hause!" },
+    { img: FotoCli4, name: "Pa'tours", slogan: "Reisen mit Klasse und Stil!" },
+    { img: UserIcon, name: "Kundenname", slogan: "Kundenslogan" },
+    { img: UserIcon, name: "Kundenname", slogan: "Kundenslogan" }
+  ],
+  fr: [
+    { img: FotoCli1, name: "École William Shakespeare", slogan: "Éduquer avec le sourire" },
+    { img: FotoCli2, name: "Alerte Sécurisée", slogan: "Pour une communauté en sécurité" },
+    { img: FotoCli3, name: "Jardin Sorelu", slogan: "Célébrez comme à la maison !" },
+    { img: FotoCli4, name: "Pa'tours", slogan: "Voyagez avec classe et style !" },
+    { img: UserIcon, name: "Nom du client", slogan: "Slogan du client" },
+    { img: UserIcon, name: "Nom du client", slogan: "Slogan du client" }
   ]
+};
+
+const sectionTitles = {
+  es: "Nuestros Clientes",
+  en: "Our Clients",
+  de: "Unsere Kunden",
+  fr: "Nos Clients"
 };
 
 const Clientes = () => {
@@ -31,7 +54,8 @@ const Clientes = () => {
   const carouselRef = useRef(null);
   const isScrolling = useRef(false);
 
-  const clientes = clientesData[language];
+  const clientes = clientesData[language] || clientesData["en"];
+  const tituloSeccion = sectionTitles[language] || sectionTitles["en"];
 
   const handleScroll = (direction) => {
     if (isScrolling.current) return;
@@ -63,6 +87,7 @@ const Clientes = () => {
 
   return (
     <section id="clientes" className="clientes-section">
+      <h2 className="clientes-title">{tituloSeccion}</h2>
       <div className="row">
         <div className="wrapper">
           <div className="arrow left" onClick={() => handleScroll('left')}>

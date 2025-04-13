@@ -23,26 +23,26 @@ const ContainerApp = () => {
             <Navbar />
             <Presentacion />
             <div className="container">
-            <AcercaDe setPlayState={setPlayState} language={language}/>
+                <AcercaDe setPlayState={setPlayState} language={language} />
                 <Titulo 
-                    subTitulo={language === "es" ? "Servicios" : "Services"} 
-                    titulo={language === "es" ? "Lo Que Ofrecemos" : "What We Offer"} 
+                    subTitulo={language === "es" ? "Servicios" : language === "en" ? "Services" : language === "de" ? "Dienstleistungen" : "Services"} 
+                    titulo={language === "es" ? "Lo Que Ofrecemos" : language === "en" ? "What We Offer" : language === "de" ? "Was Wir Anbieten" : "Ce Que Nous Offrons"} 
                 />
                 <Planes />
                 
                 <Titulo 
-                    subTitulo={language === "es" ? "Clientes" : "Clients"} 
-                    titulo={language === "es" ? "Nuestros socios y clientes" : "Our Clients and asosiates"} 
+                    subTitulo={language === "es" ? "Clientes" : language === "en" ? "Clients" : language === "de" ? "Kunden" : "Clients"} 
+                    titulo={language === "es" ? "Nuestros socios y clientes" : language === "en" ? "Our Clients and Associates" : language === "de" ? "Unsere Kunden und Partner" : "Nos Clients et Associés"} 
                 />
                 <Clientes />
                 <Titulo 
-                    subTitulo={language === "es" ? "Tecnologías" : "Technologies"}
-                    titulo={language === "es" ? "Tecnologías que utilizamos" : "Technologies we use"}
+                    subTitulo={language === "es" ? "Tecnologías" : language === "en" ? "Technologies" : language === "de" ? "Technologien" : "Technologies"} 
+                    titulo={language === "es" ? "Tecnologías que utilizamos" : language === "en" ? "Technologies we use" : language === "de" ? "Technologien, die wir verwenden" : "Technologies que nous utilisons"} 
                 />
                 <Galeria />
                 <Titulo 
-                    subTitulo={language === "es" ? "Portafolio" : "Portfolio"} 
-                    titulo={language === "es" ? "Nuestros proyectos" : "Our Proyects"} 
+                    subTitulo={language === "es" ? "Portafolio" : language === "en" ? "Portfolio" : language === "de" ? "Portfolio" : "Portfolio"} 
+                    titulo={language === "es" ? "Nuestros proyectos" : language === "en" ? "Our Projects" : language === "de" ? "Unsere Projekte" : "Nos Projets"} 
                 />
             </div>
                 
@@ -50,13 +50,13 @@ const ContainerApp = () => {
 
             <div className="container">
                 <Titulo 
-                    subTitulo={language === "es" ? "TESTIMONIOS" : "TESTIMONIALS"} 
-                    titulo={language === "es" ? "Lo Que Dicen Nuestros Clientes" : "What Our Clients Say"} 
+                    subTitulo={language === "es" ? "TESTIMONIOS" : language === "en" ? "TESTIMONIALS" : language === "de" ? "REFERENZEN" : "TÉMOIGNAGES"} 
+                    titulo={language === "es" ? "Lo Que Dicen Nuestros Clientes" : language === "en" ? "What Our Clients Say" : language === "de" ? "Was Unsere Kunden Sagen" : "Ce Que Nos Clients Disent"} 
                 />
                 <Testimonios />
                 <Titulo 
-                    subTitulo={language === "es" ? "Contactanos" : "Contact Us"} 
-                    titulo={language === "es" ? "Danos tu opinión" : "Your feedback"} 
+                    subTitulo={language === "es" ? "Contactanos" : language === "en" ? "Contact Us" : language === "de" ? "Kontaktieren Sie Uns" : "Contactez-Nous"} 
+                    titulo={language === "es" ? "Danos tu opinión" : language === "en" ? "Your feedback" : language === "de" ? "Ihr Feedback" : "Vos retours"} 
                 />
                 <Contacto />
                 <Maps />

@@ -16,19 +16,25 @@ const Planes = () => {
             img: plan_1,
             icon: plan_icon_1,
             es: "Desarrollo de Software",
-            en: "Software Development"
+            en: "Software Development",
+            de: "Softwareentwicklung",
+            fr: "Développement de logiciel"
         },
         {
             img: plan_2,
             icon: plan_icon_2,
             es: "Mantenimiento de Software",
-            en: "Software Maintenance"
+            en: "Software Maintenance",
+            de: "Softwarewartung",
+            fr: "Maintenance logicielle"
         },
         {
             img: plan_3,
             icon: plan_icon_3,
             es: "Mantenimiento de Hardware",
-            en: "Hardware Maintenance"
+            en: "Hardware Maintenance",
+            de: "Hardwarewartung",
+            fr: "Maintenance matérielle"
         }
     ];
 
@@ -39,7 +45,7 @@ const Planes = () => {
                     <img src={plan.img} alt='' />
                     <div className='subtitulo'>
                         <img src={plan.icon} alt='' />
-                        <p>{language === "es" ? plan.es : plan.en}</p>
+                        <p>{plan[language]}</p>
                     </div>
                 </div>
             ))}

@@ -52,7 +52,7 @@
 }
 
 .footer-logo {
-    width: 120px;
+    width: 80px;
     height: auto;
 }
 
@@ -76,7 +76,7 @@
 	text-align: center;
 	line-height: 40px;
 	border-radius: 50%;
-	color: #01c38e;
+	color: #00c9c3;
 	transition: all 0.5s ease;
 }
 .footer-links a {
