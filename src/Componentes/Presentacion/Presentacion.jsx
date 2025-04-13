@@ -6,10 +6,11 @@ import emi from '../../assets/emi.png';
 import presentacion1 from '../../assets/presentacion1.png';
 import presentacion2 from '../../assets/presentacion2.png';
 import presentacion3 from '../../assets/presentacion3.png';
+import presentacion4 from '../../assets/presentacion4.png';
 import { Link } from "react-scroll";
 import { useLanguage } from "../../LanguageContext"; // Import context
 
-const imageArray = [presentacion1, presentacion2, presentacion3];
+const imageArray = [presentacion1, presentacion2, presentacion3, presentacion4];
 
 const Presentacion = () => {
     const { language } = useLanguage();
