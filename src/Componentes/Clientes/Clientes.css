@@ -1,0 +1,104 @@
+/*CARRUSEL*/
+.wrapper{
+    max-width: 1900px;
+    width: 100%;
+    position: relative;
+}
+.wrapper .arrow{
+    height: 50px;
+    width: 50px;
+    background: #01c38e;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    font-size: 1.25rem;
+    transform: translateY(-50%);
+}
+.wrapper .arrow:first-child{
+    left:-22px;
+}
+.wrapper .arrow:last-child{
+    right: -22px;
+}
+
+
+.wrapper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 4) - 12px);
+    gap: 16px;
+    overflow-x: auto; 
+    scroll-behavior: smooth; 
+    scrollbar-width: 0;
+}
+.carousel::-webkit-scrollbar{
+    display: none;
+}
+.carousel :where(.card, .img){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carousel.dragging .card {
+    cursor:grab;
+    user-select: none;
+}
+.carousel .card {
+    height: 342px;
+    list-style: none;
+    background: rgba(241, 239, 239, 0.2);
+    border-radius: 22px;
+    display: flex;
+    padding-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.card .img {
+    background: #01c38e;
+    width: 148px;
+    height: 148px;
+    border-radius: 50%;
+}
+.card .img img{
+    width: 140px;
+    height: 140px;
+    object-fit:cover;
+    border-radius: 50%;
+    border: 4px solid rgba(0, 0, 0, 0.5);
+}
+
+.carousel .card span {
+    font-size: 1.3rem; 
+    text-align: center;
+    color: #fff;
+}
+
+.carousel .card h2 {
+    text-align: center;
+    color: #fff;
+}
+
+.carousel .card .social-links {
+    font-size: 1.6rem; 
+}
+
+@media screen and (max-width:1100px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 3) - 9px);
+    }
+}
+@media screen and (max-width:800px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+}
+@media screen and (max-width:600px) {
+    .wrapper .carousel {
+        grid-auto-columns: 100%;
+    }
+}

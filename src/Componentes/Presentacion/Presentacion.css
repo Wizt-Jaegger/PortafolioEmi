@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Lexend:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Playwrite+VN+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+
+/*==================== Base Layout ====================*/
+.presentacion {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(110deg, rgb(0, 0, 0), rgba(19, 45, 70, 0.8)), url('../../assets/presentacion.png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    gap: 2rem;
+    flex-wrap: wrap; /* Allows stacking on small screens */
+}
+
+/*==================== Text ====================*/
+.presentacion-texto {
+    flex: 1 1 400px;
+    max-width: 600px;
+    text-align: left;
+}
+
+.presentacion-texto h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.presentacion-texto p {
+    max-width: 100%;
+    line-height: 1.6;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 8px;
+}
+
+/*==================== Image ====================*/
+.presentacion-foto {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.presentacion-foto-img {
+    max-width: 70%;
+    height: auto;
+    border-radius: 20px;
+}
+
+/*==================== Responsive ====================*/
+@media (max-width: 950px) {
+    .presentacion-texto h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 810px) {
+    .presentacion-texto h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 670px) {
+    .presentacion {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .presentacion-texto, .presentacion-foto {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .presentacion-texto h1 {
+        font-size: 1.6rem;
+    }
+
+    .presentacion-texto p {
+        font-size: 0.9rem;
+    }
+
+    .presentacion-foto-img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 450px) {
+    .presentacion-texto h1 {
+        font-size: 1.4rem;
+    }
+
+    .presentacion-texto p {
+        font-size: 0.8rem;
+    }
+}

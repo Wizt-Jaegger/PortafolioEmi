@@ -1,0 +1,52 @@
+.planes{
+    margin: 80px auto;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.plan img{
+    width: 100%;
+    border-radius: 25px;
+    display: block;
+}
+.plan{
+    flex-basis: 21%;
+    position: relative;
+}
+.subtitulo{
+    border-radius: 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(101, 26, 86, 0.5),rgba(8, 131, 169, 0.5));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0;
+    padding-bottom: 70%;
+    transition: 0.4s;
+}
+.subtitulo img{
+    width: 60px;
+    margin-bottom: 10px;
+}
+.plan:hover .subtitulo{
+    opacity: 1;
+    padding-bottom: 0;
+}
+/*------------Media Queries-------------*/
+@media(max-width: 700px){
+    .planes{
+        flex-direction: column;
+    }
+    .plan{
+        flex-basis: 100%;
+        margin: 20px;
+    }
+}
