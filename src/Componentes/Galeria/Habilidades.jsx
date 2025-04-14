@@ -6,7 +6,6 @@ import habilidad2 from '../../assets/habilidad-2.png';
 import habilidad3 from '../../assets/habilidad-3.png';
 import habilidad4 from '../../assets/habilidad-4.png';
 import habilidad5 from '../../assets/habilidad-5.png';
-import habilidad6 from '../../assets/habilidad-6.png';
 import habilidad7 from '../../assets/habilidad-7.png';
 import flechaBlanca from '../../assets/dark-arrow.svg';
 import { useLanguage } from "../../LanguageContext";
@@ -17,7 +16,6 @@ const items = [
     { img: habilidad3, alt: "Embedded Systems", to: "/embedded", key: "embedded" },
     { img: habilidad4, alt: "Linux Systems", to: "/linux", key: "linux" },
     { img: habilidad2, alt: "Robots", to: "/robots", key: "robots" },
-    { img: habilidad6, alt: "Code Automation", to: "/automation", key: "automation" },
     { img: habilidad7, alt: "AI & Algorithms", to: "/ai", key: "ai" },
 ];
 
@@ -71,12 +69,7 @@ const Habilidades = () => {
                 de: "Entwurf und Steuerung robotischer Systeme",
                 fr: "Conception et contrôle de systèmes robotiques"
             },
-            automation: {
-                es: "Automatización de tareas y procesos",
-                en: "Automating tasks and pipelines",
-                de: "Automatisierung von Aufgaben und Abläufen",
-                fr: "Automatisation des tâches et des pipelines"
-            },
+            
             ai: {
                 es: "Inteligencia artificial y soluciones lógicas",
                 en: "Artificial intelligence and logic-based solutions",

@@ -1,0 +1,27 @@
+import React, { use, useState } from "react";
+import NavbarWebApp from "../Navbar/NavbarWebApp";
+import PresentacionLinux from "../Presentacion/PresentacionLinux";
+import Footer from "../Footer/Footer";
+import { useLanguage } from "../../LanguageContext";
+
+
+const ContainerApp = () => {
+    const { language } = useLanguage();
+
+    return (
+        <div>
+            <NavbarWebApp />
+            <PresentacionLinux />
+            <div>
+                hola esta es una prueba
+            </div>
+            <div className="container">
+            
+            </div>
+            
+            <Footer />
+        </div>
+    );
+}
+
+export default ContainerApp;
