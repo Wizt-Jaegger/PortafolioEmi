@@ -4,20 +4,42 @@ const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
     const supportedLanguages = ["en", "es", "fr", "de"];
+    const storageKey = "preferredLanguage";
 
-    const getDefaultLanguage = () => {
+    const getInitialLanguage = () => {
+        const storedLang = localStorage.getItem(storageKey);
+
+        if (storedLang && supportedLanguages.includes(storedLang)) {
+            return storedLang;
+        }
+
         const browserLanguage = navigator.language.slice(0, 2);
-        return supportedLanguages.includes(browserLanguage)
+        const defaultLang = supportedLanguages.includes(browserLanguage)
             ? browserLanguage
             : "en";
+
+        localStorage.setItem(storageKey, defaultLang);
+        return defaultLang;
     };
 
-    const [language, setLanguage] = useState(getDefaultLanguage);
+    const [language, setLanguage] = useState(getInitialLanguage);
+
+    useEffect(() => {
+        // Update localStorage
+        localStorage.setItem(storageKey, language);
+
+        // Update <html> tag's lang attribute
+        const htmlTag = document.getElementById("htmlTag");
+        if (htmlTag) {
+            htmlTag.setAttribute("lang", language);
+        }
+    }, [language]);
 
     const toggleLanguage = () => {
         const currentIndex = supportedLanguages.indexOf(language);
         const nextIndex = (currentIndex + 1) % supportedLanguages.length;
-        setLanguage(supportedLanguages[nextIndex]);
+        const newLang = supportedLanguages[nextIndex];
+        setLanguage(newLang);
     };
 
     return (
@@ -29,5 +51,4 @@ export const LanguageProvider = ({ children }) => {
     );
 };
 
-// Custom hook for easy use
 export const useLanguage = () => useContext(LanguageContext);

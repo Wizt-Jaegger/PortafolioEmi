@@ -1,4 +1,6 @@
 @import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
+
+
 #userwayAccessibilityIcon {
     
     background: rgba(0, 0, 0, 0.8) !important;
@@ -20,6 +22,7 @@ nav{
 }
 .logo{
     width: 150px;
+    cursor: pointer;
 }
 nav ul li, nav ul li.active:hover{
     font-family: Georgia;

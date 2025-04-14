@@ -31,8 +31,8 @@ const Presentacion = () => {
             button: "¡Contrátame!"
         },
         en: {
-            title: "Your TI friend",
-            description: "Solve your problems with the help of your TI friend",
+            title: "Your IT friend",
+            description: "Solve your problems with the help of your IT friend",
             button: "Hire me!"
         },
         de: {
@@ -65,7 +65,7 @@ const Presentacion = () => {
                 <p>{t.description}</p>
                 <p>
                     <Link
-                        to="planes"
+                        to="contacto"
                         smooth={true}
                         offset={-260}
                         duration={500}
@@ -73,7 +73,7 @@ const Presentacion = () => {
                     >
                         {t.button}
                         <img src={flecha_oscura} alt='' />
-                        &nbsp;&nbsp;<div class="btn2"></div>
+                        <div class="btn2"></div>
                     </Link>
                 </p>
             </div>

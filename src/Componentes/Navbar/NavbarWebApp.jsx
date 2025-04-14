@@ -24,7 +24,6 @@ const Navbar = () => {
         };
     }, []);
     
-    
 
     useEffect(() => {
         if (!document.querySelector('script[data-userway]')) {
@@ -37,7 +36,6 @@ const Navbar = () => {
         }
     }, []);
     
-
     const toggleMenu = () => setMobileMenu(!mobileMenu);
     const toggleTrayectoriaMenu = () => setTrayectoriaMenu(!trayectoriaMenu);
 
@@ -118,7 +116,10 @@ const Navbar = () => {
             </a>
 
             <nav className={`container ${sticky ? 'dark-nav' : ''}`}>
-                <img src={logo} alt="logo Sorelu" className="logo" />
+                <a href="/">
+                    <img src={logo} alt="logo Emi" className="logo" />
+                </a>
+
                 <ul className={mobileMenu ? '' : 'hide-mobile-menu'}>
                     <li className="active">
                         <Link to="presentacion" smooth={true} offset={0} duration={500}>
@@ -181,7 +182,6 @@ const Navbar = () => {
                 </ul>
                 <div className="menu-container">
                 <div className="engBtn"
-
                     onClick={() => {
                         toggleLanguage(); 
                         setTimeout(() => {
