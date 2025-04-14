@@ -23,6 +23,14 @@ const Navbar = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+    useEffect(() => {
+        const htmlTag = document.getElementById('htmlTag');
+        if (htmlTag) {
+            htmlTag.setAttribute('lang', language);
+            //reloadUserWayWidget();
+        }
+    }, [language]);
+    
 
     useEffect(() => {
         if (!document.querySelector('script[data-userway]')) {
@@ -34,11 +42,27 @@ const Navbar = () => {
             document.head.appendChild(script);
         }
     }, []);
+    /*
+    const reloadUserWayWidget = useCallback(() => {
+        const existingScript = document.querySelector('script[data-userway]');
+        if (existingScript) {
+          existingScript.remove();
+        }
+        
+        const script = document.createElement("script");
+        script.src = "https://cdn.userway.org/widget.js";
+        script.dataset.account = "kjnkkEfZx0";
+        script.dataset.userway = "true";
+        script.async = true;
+        
+        setTimeout(() => {
+          document.head.appendChild(script);
+        }, 100);
+      }, []);*/
 
     const toggleMenu = () => setMobileMenu(!mobileMenu);
     const toggleTrayectoriaMenu = () => setTrayectoriaMenu(!trayectoriaMenu);
 
-    // Traducciones
     const translations = {
         es: {
             home: "Inicio",
@@ -170,6 +194,10 @@ const Navbar = () => {
                     <li className="contactoBtn">
                         <Link to="contacto" smooth={true} offset={-260} duration={500} className="btn">
                             {t.contact}
+                            <div class="btn2">
+                            </div>
+                            
+                            
                         </Link>
                     </li>
                 </ul>

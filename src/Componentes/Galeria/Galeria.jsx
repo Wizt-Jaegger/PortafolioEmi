@@ -18,6 +18,11 @@ const imageMap = {
     [galeria_4]: galeria_4_Extend
 };
 
+// Puedes duplicar imágenes para pruebas visuales
+const images = [
+    galeria_1, galeria_2, galeria_3, galeria_4,
+];
+
 const Galeria = () => {
     const { language } = useLanguage(); 
     const [selectedImage, setSelectedImage] = useState(null);
@@ -42,7 +47,7 @@ const Galeria = () => {
     return (
         <div className="galeria">
             <div className="gallery">
-                {[galeria_1, galeria_2, galeria_3, galeria_4].map((image, index) => (
+                {images.map((image, index) => (
                     <img 
                         key={index} 
                         src={image} 

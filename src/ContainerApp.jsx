@@ -13,6 +13,7 @@ import ReproductorVideo from "./Componentes/ReproductorVideo/ReproductorVideo";
 import { useLanguage } from "../src/LanguageContext"; 
 import Clientes from "./Componentes/Clientes/Clientes";
 import Portafolio from "./Componentes/Portafolio/Portafolio";
+import Habilidades from "./Componentes/Galeria/Habilidades";
 
 const ContainerApp = () => {
     const [playState, setPlayState] = useState(false);
@@ -23,6 +24,29 @@ const ContainerApp = () => {
             <Navbar />
             <Presentacion />
             <div className="container">
+            <Titulo 
+                subTitulo={
+                    language === "es" ? 
+                    "Apps, robots, servidores, VMs y más." : 
+                    language === "en" ? 
+                    "Apps, robots, servers, VMs, and more." : 
+                    language === "de" ? 
+                    "Apps, Roboter, Server, VMs und mehr." : 
+                    "Applications, robots, serveurs, VMs, et plus encore."
+                } 
+                titulo={
+                    language === "es" ? 
+                    "¿Qué puedo hacer por ti?" : 
+                    language === "en" ? 
+                    "What Can I Do for You?" : 
+                    language === "de" ? 
+                    "Was kann ich für dich tun?" : 
+                    "Que puis-je faire pour vous ?"
+                } 
+            />
+
+
+                <Habilidades />
                 <AcercaDe setPlayState={setPlayState} language={language} />
                 <Titulo 
                     subTitulo={language === "es" ? "Servicios" : language === "en" ? "Services" : language === "de" ? "Dienstleistungen" : "Services"} 

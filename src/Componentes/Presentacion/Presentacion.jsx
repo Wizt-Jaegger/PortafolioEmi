@@ -73,6 +73,7 @@ const Presentacion = () => {
                     >
                         {t.button}
                         <img src={flecha_oscura} alt='' />
+                        &nbsp;&nbsp;<div class="btn2"></div>
                     </Link>
                 </p>
             </div>
