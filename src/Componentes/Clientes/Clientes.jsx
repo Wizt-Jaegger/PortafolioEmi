@@ -106,8 +106,12 @@ const Clientes = () => {
                 <div className="img">
                   <img src={cliente.img} alt={cliente.name} draggable="false" />
                 </div>
-                <h2>{cliente.name}</h2>
-                <span>{cliente.slogan}</span>
+                {/*
+                <div className="containerCertificationTxt">*/}
+                  <h2>{cliente.name}</h2>
+                  <span>{cliente.slogan}</span>
+                {/*</div>*/}
+                
               </li>
             ))}
           </ul>

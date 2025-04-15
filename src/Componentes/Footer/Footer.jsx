@@ -32,30 +32,43 @@ const Footer = () => {
             de: "Startseite",
             fr: "Accueil"
         },
-        about: {
-            es: "Acerca de",
-            en: "About",
-            de: "Über uns",
-            fr: "À propos"
+        webSystems: {
+            es: "Sistemas Web",
+            en: "Web Systems",
+            de: "Websysteme",
+            fr: "Systèmes Web"
         },
-        plans: {
-            es: "Planes",
-            en: "Plans",
-            de: "Pläne",
-            fr: "Plans"
+        devOps: {
+            es: "DevOps (Virtualización)",
+            en: "DevOps (Virtualization)",
+            de: "DevOps (Virtualisierung)",
+            fr: "DevOps (Virtualisation)"
         },
-        gallery: {
-            es: "Galería",
-            en: "Gallery",
-            de: "Galerie",
-            fr: "Galerie"
+        embeddedSystems: {
+            es: "Sistemas Embebidos",
+            en: "Embedded Systems",
+            de: "Eingebettete Systeme",
+            fr: "Systèmes Embarqués"
         },
-        testimonials: {
-            es: "Testimonios",
-            en: "Testimonials",
-            de: "Erfahrungsberichte",
-            fr: "Témoignages"
+        linuxEngineering: {
+            es: "Ingeniería Linux",
+            en: "Linux Engineering",
+            de: "Linux-Engineering",
+            fr: "Ingénierie Linux"
         },
+        robotics: {
+            es: "Robótica",
+            en: "Robotics",
+            de: "Robotik",
+            fr: "Robotique"
+        },
+        artificialIntelligence: {
+            es: "Inteligencia Artificial",
+            en: "Artificial Intelligence",
+            de: "Künstliche Intelligenz",
+            fr: "Intelligence Artificielle"
+        },
+        
         contact: {
             es: "Contacto",
             en: "Contact",
@@ -92,7 +105,6 @@ const Footer = () => {
                             <span className="footer-logo-container">
                                 <img src={logoFooter} alt="Logo" className="footer-logo" />
                             </span>
-                            <span className="footer-company-name">IT</span>
                         </h3>
                         <div className="footer-links">
                             <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">
@@ -110,26 +122,26 @@ const Footer = () => {
                             {translations.index[language]}
                         </h3>
                         <div className="footer-links">
-                            <Link to="presentacion" smooth={true} offset={0} duration={500}>
-                                {translations.home[language]}
-                            </Link>
-                            <Link to="about" smooth={true} offset={-150} duration={500}>
-                                {translations.about[language]}
-                            </Link>
-                            <Link to="planes" smooth={true} offset={-260} duration={500}>
-                                {translations.plans[language]}
-                            </Link>
-                            <Link to="habilidades" smooth={true} offset={-260} duration={500}>
-                                {translations.gallery[language]}
-                            </Link>
-                            {/**
-                             * <Link to="testimonios" smooth={true} offset={-260} duration={500}>
-                                {translations.testimonials[language]}
-                            </Link>
-                             * 
-                             */}
-                            
+                            <a href="/linux">
+                                {translations.linuxEngineering[language]}
+                            </a>
+                            <a href="/devops">
+                                {translations.devOps[language]}
+                            </a>
+                            <a href="/robots">
+                                {translations.robotics[language]}
+                            </a>
+                            <a href="/ai">
+                                {translations.artificialIntelligence[language]}
+                            </a>
+                            <a href="/embedded">
+                                {translations.embeddedSystems[language]}
+                            </a>
+                            <a href="/web">
+                                {translations.webSystems[language]}
+                            </a>
                         </div>
+
                     </div>
 
                     {/* Contact Section */}
