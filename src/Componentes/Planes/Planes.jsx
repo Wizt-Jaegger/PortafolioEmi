@@ -15,26 +15,26 @@ const Planes = () => {
         {
             img: plan_1,
             icon: plan_icon_1,
-            es: "Desarrollo de Software",
-            en: "Software Development",
-            de: "Softwareentwicklung",
-            fr: "Développement de logiciel"
+            es: "Español - nativo",
+            en: "Spanish - native",
+            de: "Spanisch - Native",
+            fr: "Espagnol - natif"
         },
         {
             img: plan_2,
             icon: plan_icon_2,
-            es: "Mantenimiento de Software",
-            en: "Software Maintenance",
-            de: "Softwarewartung",
-            fr: "Maintenance logicielle"
+            es: "Inglés - C1",
+            en: "English - C1",
+            de: "Englisch - C1",
+            fr: "Anglais - C1"
         },
         {
             img: plan_3,
             icon: plan_icon_3,
-            es: "Mantenimiento de Hardware",
-            en: "Hardware Maintenance",
-            de: "Hardwarewartung",
-            fr: "Maintenance matérielle"
+            es: "Francés - A2",
+            en: "French - A2",
+            de: "Französisch - A2",
+            fr: "Français - A2"
         }
     ];
 

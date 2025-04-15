@@ -47,44 +47,44 @@ const Navbar = () => {
             about: "Acerca de",
             services: "Servicios",
             trajectory: "Trayectoria",
-            clients: "Clientes",
-            technologies: "Tecnologías",
+            clients: "Certificaciones",
+            technologies: "Lenguajes",
             portfolio: "Portafolio",
             testimonials: "Testimonios",
-            contact: "Contáctanos"
+            contact: "Contactame"
         },
         en: {
             home: "Home",
             about: "About",
             services: "Services",
             trajectory: "Trajectory",
-            clients: "Clients",
-            technologies: "Technologies",
+            clients: "Certifications",
+            technologies: "Languages",
             portfolio: "Portfolio",
             testimonials: "Testimonials",
-            contact: "Contact Us"
+            contact: "Contact me"
         },
         de: {
             home: "Startseite",
             about: "Über uns",
             services: "Dienstleistungen",
             trajectory: "Werdegang",
-            clients: "Kunden",
-            technologies: "Technologien",
+            clients: "Zertifikate",
+            technologies: "Sprachen",
             portfolio: "Portfolio",
             testimonials: "Referenzen",
-            contact: "Kontaktieren Sie uns"
+            contact: "Kontaktiere mich"
         },
         fr: {
             home: "Accueil",
             about: "À propos",
             services: "Services",
             trajectory: "Parcours",
-            clients: "Clients",
-            technologies: "Technologies",
+            clients: "Certifications",
+            technologies: "Langues",
             portfolio: "Portfolio",
             testimonials: "Témoignages",
-            contact: "Contactez-nous"
+            contact: "Contactez-moi"
         }
     };
 
@@ -118,21 +118,24 @@ const Navbar = () => {
             </a>
 
             <nav className={`container ${sticky ? 'dark-nav' : ''}`}>
-                <img src={logo} alt="logo Sorelu" className="logo" />
+                <Link to="presentacion" smooth={true} offset={0} duration={500}>
+                    <img src={logo} alt="logo Emi" className="logo" />
+                </Link>
                 <ul className={mobileMenu ? '' : 'hide-mobile-menu'}>
                     <li className="active">
                         <Link to="presentacion" smooth={true} offset={0} duration={500}>
                             {t.home}
                         </Link>
                     </li>
+                    
                     <li>
-                        <Link to="acercaDe" smooth={true} offset={-150} duration={500}>
-                            {t.about}
+                        <Link to="habilidades" smooth={true} offset={-260} duration={500}>
+                            {t.services}
                         </Link>
                     </li>
                     <li>
-                        <Link to="planes" smooth={true} offset={-260} duration={500}>
-                            {t.services}
+                        <Link to="about" smooth={true} offset={0} duration={500}>
+                            {t.about}
                         </Link>
                     </li>
                     <li
@@ -148,12 +151,12 @@ const Navbar = () => {
                         />
                         <ul className={`submenu ${trayectoriaMenu ? 'show' : ''}`}>
                             <li>
-                                <Link to="clientes" smooth={true} offset={-260} duration={500}>
+                                <Link to="clientes" smooth={true} offset={-200} duration={500}>
                                     {t.clients}
                                 </Link>
                             </li>
                             <li>
-                                <Link to="galeria" smooth={true} offset={-260} duration={500}>
+                                <Link to="planes" smooth={true} offset={-260} duration={500}>
                                     {t.technologies}
                                 </Link>
                             </li>
@@ -162,11 +165,14 @@ const Navbar = () => {
                                     {t.portfolio}
                                 </Link>
                             </li>
+                            {/*
                             <li>
                                 <Link to="testimonios" smooth={true} offset={-260} duration={500}>
                                     {t.testimonials}
                                 </Link>
                             </li>
+                            */}
+                            
                         </ul>
                     </li>
                     <li className="contactoBtn">

@@ -3,7 +3,6 @@ import Navbar from "./Componentes/Navbar/Navbar";
 import Presentacion from "./Componentes/Presentacion/Presentacion";
 import Planes from "./Componentes/Planes/Planes";
 import Titulo from "./Componentes/Titulo/Titulo";
-import AcercaDe from "./Componentes/AcercaDe/AcercaDe";
 import Galeria from "./Componentes/Galeria/Galeria";
 import Testimonios from "./Componentes/Testimonios/Testimonios";
 import Contacto from "./Componentes/Contacto/Contacto";
@@ -11,9 +10,10 @@ import Footer from "./Componentes/Footer/Footer";
 import Maps from "./Componentes/Maps/Maps";
 import ReproductorVideo from "./Componentes/ReproductorVideo/ReproductorVideo";
 import { useLanguage } from "../src/LanguageContext"; 
-import Clientes from "./Componentes/Clientes/Clientes";
+import Certificados from "./Componentes/Clientes/Clientes";
 import Portafolio from "./Componentes/Portafolio/Portafolio";
 import Habilidades from "./Componentes/Galeria/Habilidades";
+import AboutMe from "./Componentes/AboutMe/AboutMe";
 
 const ContainerApp = () => {
     const [playState, setPlayState] = useState(false);
@@ -24,66 +24,77 @@ const ContainerApp = () => {
             <Navbar />
             <Presentacion />
             <div className="container">
-            <Titulo 
-                subTitulo={
-                    language === "es" ? 
-                    "Apps, robots, servidores, VMs y más." : 
-                    language === "en" ? 
-                    "Apps, robots, servers, VMs, and more." : 
-                    language === "de" ? 
-                    "Apps, Roboter, Server, VMs und mehr." : 
-                    "Applications, robots, serveurs, VMs, et plus encore."
-                } 
-                titulo={
-                    language === "es" ? 
-                    "¿Qué puedo hacer por ti?" : 
-                    language === "en" ? 
-                    "What Can I Do for You?" : 
-                    language === "de" ? 
-                    "Was kann ich für dich tun?" : 
-                    "Que puis-je faire pour vous ?"
-                } 
-            />
-
-
-                <Habilidades />
-                <AcercaDe setPlayState={setPlayState} language={language} />
                 <Titulo 
-                    subTitulo={language === "es" ? "Servicios" : language === "en" ? "Services" : language === "de" ? "Dienstleistungen" : "Services"} 
-                    titulo={language === "es" ? "Lo Que Ofrecemos" : language === "en" ? "What We Offer" : language === "de" ? "Was Wir Anbieten" : "Ce Que Nous Offrons"} 
+                    subTitulo={
+                        language === "es" ? 
+                        "Apps, robots, servidores, VMs y más." : 
+                        language === "en" ? 
+                        "Apps, robots, servers, VMs, and more." : 
+                        language === "de" ? 
+                        "Apps, Roboter, Server, VMs und mehr." : 
+                        "Applications, robots, serveurs, VMs, et plus encore."
+                    } 
+                    titulo={
+                        language === "es" ? 
+                        "¿Qué puedo hacer por ti?" : 
+                        language === "en" ? 
+                        "What Can I Do for You?" : 
+                        language === "de" ? 
+                        "Was kann ich für dich tun?" : 
+                        "Que puis-je faire pour vous ?"
+                    } 
                 />
-                <Planes />
+                <Habilidades />
+                <AboutMe/>
                 
                 <Titulo 
-                    subTitulo={language === "es" ? "Clientes" : language === "en" ? "Clients" : language === "de" ? "Kunden" : "Clients"} 
-                    titulo={language === "es" ? "Nuestros socios y clientes" : language === "en" ? "Our Clients and Associates" : language === "de" ? "Unsere Kunden und Partner" : "Nos Clients et Associés"} 
+                    subTitulo={
+                        language === "es" ? "Idiomas" :
+                        language === "en" ? "Languages" :
+                        language === "de" ? "Sprachen" :
+                        "Langues"
+                    }
+                    titulo={
+                        language === "es" ? "¿Necesitas que hable otro idioma?" :
+                        language === "en" ? "Do you need me to speak another language?" :
+                        language === "de" ? "Brauchen Sie, dass ich eine andere Sprache spreche?" :
+                        "Avez-vous besoin que je parle une autre langue ?"
+                    }
                 />
-                <Clientes />
+                <Planes />
+                    
                 <Titulo 
-                    subTitulo={language === "es" ? "Tecnologías" : language === "en" ? "Technologies" : language === "de" ? "Technologien" : "Technologies"} 
-                    titulo={language === "es" ? "Tecnologías que utilizamos" : language === "en" ? "Technologies we use" : language === "de" ? "Technologien, die wir verwenden" : "Technologies que nous utilisons"} 
+                    subTitulo={language === "es" ? "Certificaciones" : language === "en" ? "Certificates" : language === "de" ? "Zertifikate" :"Certificats"
+                    }
+                    titulo={language === "es" ? "Certificaciones y diplomas obtenidos" : language === "en" ? "Certificates and Diplomas I've Earned" : language === "de" ? "Erhaltene Zertifikate und Abschlüsse" :"Certificats et diplômes obtenus"
+                    }
                 />
-                <Galeria />
+
+                <Certificados />
+                
                 <Titulo 
                     subTitulo={language === "es" ? "Portafolio" : language === "en" ? "Portfolio" : language === "de" ? "Portfolio" : "Portfolio"} 
-                    titulo={language === "es" ? "Nuestros proyectos" : language === "en" ? "Our Projects" : language === "de" ? "Unsere Projekte" : "Nos Projets"} 
+                    titulo={language === "es" ? "Mis proyectos" : language === "en" ? "My Projects" : language === "de" ? "Unsere Projekte" : "Mes Projets"}
                 />
             </div>
                 
             <Portafolio />
 
             <div className="container">
+                {/*
                 <Titulo 
                     subTitulo={language === "es" ? "TESTIMONIOS" : language === "en" ? "TESTIMONIALS" : language === "de" ? "REFERENZEN" : "TÉMOIGNAGES"} 
                     titulo={language === "es" ? "Lo Que Dicen Nuestros Clientes" : language === "en" ? "What Our Clients Say" : language === "de" ? "Was Unsere Kunden Sagen" : "Ce Que Nos Clients Disent"} 
                 />
                 <Testimonios />
+                */}
+                
                 <Titulo 
-                    subTitulo={language === "es" ? "Contactanos" : language === "en" ? "Contact Us" : language === "de" ? "Kontaktieren Sie Uns" : "Contactez-Nous"} 
-                    titulo={language === "es" ? "Danos tu opinión" : language === "en" ? "Your feedback" : language === "de" ? "Ihr Feedback" : "Vos retours"} 
+                    subTitulo={language === "es" ? "Contactame" : language === "en" ? "Contact Me" : language === "de" ? "Kontaktiere mic" : "Contactez-moi"} 
+                    titulo={language === "es" ? "Da tu opinión" : language === "en" ? "Your feedback" : language === "de" ? "Ihr Feedback" : "Vos retours"} 
                 />
                 <Contacto />
-                <Maps />
+                {/* <Maps /> */}
             </div>
             
             <Footer />

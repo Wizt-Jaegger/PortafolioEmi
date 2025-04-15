@@ -4,43 +4,50 @@ import FotoCli1 from "../../assets/FotoCli_1.png";
 import FotoCli2 from "../../assets/FotoCli_2.png";
 import FotoCli3 from "../../assets/FotoCli_3.png";
 import FotoCli4 from "../../assets/FotoCli_4.png";
+import FotoCli5 from "../../assets/FotoCli_5.png";
+import FotoCli6 from "../../assets/FotoCli_6.png";
 import UserIcon from "../../assets/user_Icon.jpg";
 import { useLanguage } from "../../LanguageContext";
 
 const clientesData = {
   es: [
-    { img: FotoCli1, name: "Colegio William Shakespeare", slogan: "Educando con una sonrisa" },
-    { img: FotoCli2, name: "Alerta Segura", slogan: "Por una comunidad segura" },
-    { img: FotoCli3, name: "Jardín Sorelu", slogan: "¡Celebra como en casa!" },
-    { img: FotoCli4, name: "Pa'tours", slogan: "¡Viajes con clase y estilo!" },
-    { img: UserIcon, name: "Nombre cliente", slogan: "Slogan cliente" },
-    { img: UserIcon, name: "Nombre cliente", slogan: "Slogan cliente" }
+    { img: FotoCli1, name: "Cisco Network Academy", slogan: "English for IT 2" },
+    { img: FotoCli2, name: "Cisco Network Academy", slogan: "CCNA: Networking empresarial, seguridad y automatización" },
+    { img: FotoCli3, name: "Cisco Network Academy", slogan: "Python Essentials 1" },
+    { img: FotoCli4, name: "Universidad Autónoma del Estado de Morelos", slogan: "Diplomado en Mecatrónica y Automatización" },
+    { img: FotoCli5, name: "Platzi", slogan: "Curso de control de flujo en C" },
+    { img: FotoCli6, name: "Platzi", slogan: "Introducción a la terminal y línea de comandos" },
+    { img: UserIcon, name: "Nombre empresa", slogan: "Nombre diploma" }
   ],
   en: [
-    { img: FotoCli1, name: "William Shakespeare School", slogan: "Educating with a smile" },
-    { img: FotoCli2, name: "Safe Alert", slogan: "For a safe community" },
-    { img: FotoCli3, name: "Sorelu Garden", slogan: "Celebrate like at home!" },
-    { img: FotoCli4, name: "Pa'tours", slogan: "Travel with class and style!" },
-    { img: UserIcon, name: "Client Name", slogan: "Client slogan" },
-    { img: UserIcon, name: "Client Name", slogan: "Client slogan" }
+    { img: FotoCli1, name: "Cisco Network Academy", slogan: "English for IT 2" },
+    { img: FotoCli2, name: "Cisco Network Academy", slogan: "CCNA: Enterprise Networking, Security, and Automation" },
+    { img: FotoCli3, name: "Cisco Network Academy", slogan: "Python Essentials 1" },
+    { img: FotoCli4, name: "Autonomous University of the State of Morelos", slogan: "Diploma in Mechatronics and Automation" },
+    { img: FotoCli5, name: "Platzi", slogan: "Flow Control in C Course" },
+    { img: FotoCli6, name: "Platzi", slogan: "Introduction to Terminal and Command Line" },
+    { img: UserIcon, name: "Company Name", slogan: "Diploma Name" }
   ],
   de: [
-    { img: FotoCli1, name: "William Shakespeare Schule", slogan: "Bildung mit einem Lächeln" },
-    { img: FotoCli2, name: "Sichere Alarmierung", slogan: "Für eine sichere Gemeinschaft" },
-    { img: FotoCli3, name: "Sorelu Garten", slogan: "Feiere wie zu Hause!" },
-    { img: FotoCli4, name: "Pa'tours", slogan: "Reisen mit Klasse und Stil!" },
-    { img: UserIcon, name: "Kundenname", slogan: "Kundenslogan" },
-    { img: UserIcon, name: "Kundenname", slogan: "Kundenslogan" }
+    { img: FotoCli1, name: "Cisco Network Academy", slogan: "English for IT 2" },
+    { img: FotoCli2, name: "Cisco Network Academy", slogan: "CCNA: Unternehmensnetzwerke, Sicherheit und Automatisierung" },
+    { img: FotoCli3, name: "Cisco Network Academy", slogan: "Python Essentials 1" },
+    { img: FotoCli4, name: "Autonome Universität des Bundesstaates Morelos", slogan: "Diplom in Mechatronik und Automatisierung" },
+    { img: FotoCli5, name: "Platzi", slogan: "Kurs zur Flusskontrolle in C" },
+    { img: FotoCli6, name: "Platzi", slogan: "Einführung in das Terminal und die Befehlszeile" },
+    { img: UserIcon, name: "Firmenname", slogan: "Diplomname" }
   ],
   fr: [
-    { img: FotoCli1, name: "École William Shakespeare", slogan: "Éduquer avec le sourire" },
-    { img: FotoCli2, name: "Alerte Sécurisée", slogan: "Pour une communauté en sécurité" },
-    { img: FotoCli3, name: "Jardin Sorelu", slogan: "Célébrez comme à la maison !" },
-    { img: FotoCli4, name: "Pa'tours", slogan: "Voyagez avec classe et style !" },
-    { img: UserIcon, name: "Nom du client", slogan: "Slogan du client" },
-    { img: UserIcon, name: "Nom du client", slogan: "Slogan du client" }
+    { img: FotoCli1, name: "Cisco Network Academy", slogan: "English for IT 2" },
+    { img: FotoCli2, name: "Cisco Network Academy", slogan: "CCNA : Réseautage d'entreprise, sécurité et automatisation" },
+    { img: FotoCli3, name: "Cisco Network Academy", slogan: "Python Essentials 1" },
+    { img: FotoCli4, name: "Université autonome de l'État de Morelos", slogan: "Diplôme en mécatronique et automatisation" },
+    { img: FotoCli5, name: "Platzi", slogan: "Cours de contrôle de flux en C" },
+    { img: FotoCli6, name: "Platzi", slogan: "Introduction au terminal et à la ligne de commande" },
+    { img: UserIcon, name: "Nom de l'entreprise", slogan: "Nom du diplôme" }
   ]
 };
+
 
 const sectionTitles = {
   es: "Nuestros Clientes",

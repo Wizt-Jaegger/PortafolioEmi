@@ -92,7 +92,7 @@ const Footer = () => {
                             <span className="footer-logo-container">
                                 <img src={logoFooter} alt="Logo" className="footer-logo" />
                             </span>
-                            <span className="footer-company-name">SA de CV</span>
+                            <span className="footer-company-name">IT</span>
                         </h3>
                         <div className="footer-links">
                             <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">
@@ -113,18 +113,22 @@ const Footer = () => {
                             <Link to="presentacion" smooth={true} offset={0} duration={500}>
                                 {translations.home[language]}
                             </Link>
-                            <Link to="acercaDe" smooth={true} offset={-150} duration={500}>
+                            <Link to="about" smooth={true} offset={-150} duration={500}>
                                 {translations.about[language]}
                             </Link>
                             <Link to="planes" smooth={true} offset={-260} duration={500}>
                                 {translations.plans[language]}
                             </Link>
-                            <Link to="galeria" smooth={true} offset={-260} duration={500}>
+                            <Link to="habilidades" smooth={true} offset={-260} duration={500}>
                                 {translations.gallery[language]}
                             </Link>
-                            <Link to="testimonios" smooth={true} offset={-260} duration={500}>
+                            {/**
+                             * <Link to="testimonios" smooth={true} offset={-260} duration={500}>
                                 {translations.testimonials[language]}
                             </Link>
+                             * 
+                             */}
+                            
                         </div>
                     </div>
 
@@ -150,19 +154,16 @@ const Footer = () => {
                     <div className="footer-col" id="servicios">
                         <h3 className='footer-h3'>{translations.follow[language]}</h3>
                         <div className="social-links">
-                            <a href="https://www.facebook.com/profile.php?id=61566404114321" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.facebook.com/share/1B6xR3dHLi/" target="_blank" rel="noopener noreferrer">
                                 <i className="fab fa-facebook-f"></i>
                             </a>
-                            <a href="https://www.instagram.com/techpal_mx/" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.instagram.com/argi_wizt?igsh=YjN1MHc0cGszYm85" target="_blank" rel="noopener noreferrer">
                                 <i className="fab fa-instagram"></i>
                             </a>
-                            <a href="https://wa.me/527779712940" target="_blank" rel="noopener noreferrer">
+                            <a href="https://wa.me/527779904960" target="_blank" rel="noopener noreferrer">
                                 <i className="fab fa-whatsapp"></i>
                             </a>
-                            <a href="https://x.com/TechPal_mx" target="_blank" rel="noopener noreferrer">
-                                <i className="fab fa-x-twitter"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/company/techpal-mx/about/?viewAsMember=true" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.linkedin.com/in/luis-emiliano-reyes-gutierrez-231833208/" target="_blank" rel="noopener noreferrer">
                                 <i className="fab fa-linkedin-in"></i>
                             </a>
                         </div>

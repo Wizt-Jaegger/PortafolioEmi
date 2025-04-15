@@ -83,7 +83,7 @@ const Habilidades = () => {
     const visibleItems = showAll ? items : items.slice(0, 4);
 
     return (
-        <div className="galeria">
+        <div className="habilidades">
             <div className="gallery">
             {visibleItems.map(({ img, alt, to, key }, index) => (
                 <Link key={index} to={to} className="gallery-item">
