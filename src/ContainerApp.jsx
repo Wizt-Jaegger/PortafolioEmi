@@ -3,12 +3,8 @@ import Navbar from "./Componentes/Navbar/Navbar";
 import Presentacion from "./Componentes/Presentacion/Presentacion";
 import Planes from "./Componentes/Planes/Planes";
 import Titulo from "./Componentes/Titulo/Titulo";
-import Galeria from "./Componentes/Galeria/Galeria";
-import Testimonios from "./Componentes/Testimonios/Testimonios";
 import Contacto from "./Componentes/Contacto/Contacto";
 import Footer from "./Componentes/Footer/Footer";
-import Maps from "./Componentes/Maps/Maps";
-import ReproductorVideo from "./Componentes/ReproductorVideo/ReproductorVideo";
 import { useLanguage } from "../src/LanguageContext"; 
 import Certificados from "./Componentes/Clientes/Clientes";
 import Portafolio from "./Componentes/Portafolio/Portafolio";
@@ -16,7 +12,6 @@ import Habilidades from "./Componentes/Galeria/Habilidades";
 import AboutMe from "./Componentes/AboutMe/AboutMe";
 
 const ContainerApp = () => {
-    const [playState, setPlayState] = useState(false);
     const { language } = useLanguage();
 
     return (
@@ -98,7 +93,6 @@ const ContainerApp = () => {
             </div>
             
             <Footer />
-            <ReproductorVideo playState={playState} setPlayState={setPlayState} />
         </div>
     );
 }
