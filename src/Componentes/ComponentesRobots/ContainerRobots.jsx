@@ -22,12 +22,12 @@ const translations = {
 const ContainerApp = () => {
     const { language } = useLanguage();
     const { message } = translations[language] || translations["en"]; 
-    
+
     return (
         <div>
             <NavbarWebApp />
             <PresentacionRobots />
-                <div style={{ color: "white", padding: "1rem" }}>
+                <div style={{ color: "white", padding: "2rem", fontSize:"3rem" , margin: "1rem" }}>
                     {message}
                 </div>
             <div className="container">
