@@ -49,7 +49,8 @@ const Navbar = () => {
             technologies: "Tecnologías",
             portfolio: "Portafolio",
             testimonials: "Testimonios",
-            contact: "Contáctanos"
+            contact: "Regresar",
+            txtlink: "encontrarás más enlaces pronto, gracias por la paciencia"
         },
         en: {
             home: "Home",
@@ -60,7 +61,8 @@ const Navbar = () => {
             technologies: "Technologies",
             portfolio: "Portfolio",
             testimonials: "Testimonials",
-            contact: "Contact Us"
+            contact: "Go back",
+            txtlink: "you'll find more links soon, thanks for the patience"
         },
         de: {
             home: "Startseite",
@@ -71,7 +73,8 @@ const Navbar = () => {
             technologies: "Technologien",
             portfolio: "Portfolio",
             testimonials: "Referenzen",
-            contact: "Kontaktieren Sie uns"
+            contact: "Rückkehr",
+            txtlink: "findet dir noch mehr links, danke für die patience"
         },
         fr: {
             home: "Accueil",
@@ -82,7 +85,8 @@ const Navbar = () => {
             technologies: "Technologies",
             portfolio: "Portfolio",
             testimonials: "Témoignages",
-            contact: "Contactez-nous"
+            contact: "Retour",
+            txtlink: "vous trouverez plus de liens bientôt, merci pour la patience"
         }
     };
 
@@ -127,49 +131,11 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="acercaDe" smooth={true} offset={-150} duration={500}>
-                            {t.about}
-                        </Link>
+                        <div>
+                            {t.txtlink}
+                        </div>
                     </li>
-                    <li>
-                        <Link to="planes" smooth={true} offset={-260} duration={500}>
-                            {t.services}
-                        </Link>
-                    </li>
-                    <li
-                        className="dropdown"
-                        onMouseEnter={toggleTrayectoriaMenu}
-                        onMouseLeave={toggleTrayectoriaMenu}
-                    >
-                        <span>{t.trajectory}</span>
-                        <img
-                            src={trayectoriaMenu ? closedown_icon : dropdown_icon}
-                            alt="Dropdown Icon"
-                            className="dropdown-icon"
-                        />
-                        <ul className={`submenu ${trayectoriaMenu ? 'show' : ''}`}>
-                            <li>
-                                <Link to="clientes" smooth={true} offset={-260} duration={500}>
-                                    {t.clients}
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to="galeria" smooth={true} offset={-260} duration={500}>
-                                    {t.technologies}
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to="portfolio section" smooth={true} offset={-80} duration={500}>
-                                    {t.portfolio}
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to="testimonios" smooth={true} offset={-260} duration={500}>
-                                    {t.testimonials}
-                                </Link>
-                            </li>
-                        </ul>
-                    </li>
+                    
                     <li className="contactoBtn">
                         <a href="/#contact" smooth={true} offset={-260} duration={500} className="btn">
                             {t.contact}
