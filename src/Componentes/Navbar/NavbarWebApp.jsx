@@ -171,13 +171,12 @@ const Navbar = () => {
                         </ul>
                     </li>
                     <li className="contactoBtn">
-                        <Link to="contacto" smooth={true} offset={-260} duration={500} className="btn">
+                        <a href="/#contact" smooth={true} offset={-260} duration={500} className="btn">
                             {t.contact}
                             <div class="btn2">
                             </div>
                             
-                            
-                        </Link>
+                        </a>
                     </li>
                 </ul>
                 <div className="menu-container">
