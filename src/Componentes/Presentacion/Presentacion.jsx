@@ -26,14 +26,14 @@ const Presentacion = () => {
 
     const translations = {
         es: {
-            title: "Tu amigo de TI",
+            title: "Tu amigo de informática",
             description: "Resuelve tus problemas con la ayuda de tu amigo de TI",
-            button: "¡Contrátame!"
+            button: "¡Descarga CV!"
         },
         en: {
             title: "Your IT friend",
             description: "Solve your problems with the help of your IT friend",
-            button: "Hire me!"
+            button: "Résumé"
         },
         de: {
             title: "Dein IT-Freund",
