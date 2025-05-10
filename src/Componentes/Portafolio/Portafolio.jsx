@@ -22,7 +22,7 @@ const Portafolio = () => {
 
   const portfolioItems = [
     { src: portfolio1, onClick: playVideo },
-    { href: "https://umontealban.edu.mx", src: portfolio2 },
+    { href: "https://github.com/Wizt-Jaegger/UpeDrive", src: portfolio2 },
     { href: "https://www.tinkercad.com/things/5VigfSTczX7-v1prototipoimpresora?sharecode=Rz8PJhcfpLaK2N89cqN02_zfxByNnm66SQxiDf7UxPg", src: portfolio3 },
     { href: "https://github.com/Wizt-Jaegger/MicroWord", src: portfolio4 },
     { href: "https://www.youtube.com/watch?v=QKqrrb_dqAI&ab_channel=Gixarde3", src: portfolio5 },
