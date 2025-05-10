@@ -28,24 +28,25 @@ const Presentacion = () => {
         es: {
             title: "Tu amigo de informática",
             description: "Resuelve tus problemas con la ayuda de tu amigo de TI",
-            button: "¡Descarga CV!"
+            button: "Descarga mi CV"
         },
         en: {
             title: "Your IT friend",
             description: "Solve your problems with the help of your IT friend",
-            button: "Résumé"
+            button: "Download my résumé"
         },
         de: {
             title: "Dein IT-Freund",
             description: "Löse deine Probleme mit der Hilfe deines IT-Freundes",
-            button: "Stell mich ein!"
+            button: "Lade meinen Lebenslauf herunter"
         },
         fr: {
             title: "Ton ami en TI",
             description: "Résous tes problèmes avec l'aide de ton ami en TI",
-            button: "Embauche-moi !"
+            button: "Télécharge mon CV"
         }
     };
+
 
     const t = translations[language];
 
@@ -64,18 +65,17 @@ const Presentacion = () => {
                 <h1>{t.title}</h1>
                 <p>{t.description}</p>
                 <p>
-                    <Link
-                        to="contacto"
-                        smooth={true}
-                        offset={-260}
-                        duration={500}
+                    <a
+                        href={`/CV_LuisEReyesG_${language.toUpperCase()}.pdf`}
+                        download
                         className="btn"
                     >
                         {t.button}
                         <img src={flecha_oscura} alt='' />
-                        <div class="btn2"></div>
-                    </Link>
+                        <div className="btn2"></div>
+                    </a>
                 </p>
+
             </div>
             <div className='presentacion-foto'>
                 <img src={emi} alt="Emi" className="presentacion-foto-img" />
