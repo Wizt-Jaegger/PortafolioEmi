@@ -4,8 +4,6 @@ import PresentacionAI from "../Presentacion/PresentacionAI";
 import Footer from "../Footer/Footer";
 import { useLanguage } from "../../LanguageContext";
 
-import { useLanguage } from "../../LanguageContext";
-
 const translations = {
     es: {
         message: "Hola, este sitio fue creado por mí como estudiante. Estoy en mi último año, por lo que tengo muchos proyectos; debido a ello, no puedo actualizar la página tan seguido como quisiera. Agradezco tu paciencia con las actualizaciones."
