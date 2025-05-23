@@ -182,7 +182,7 @@ const AboutMe = () => {
                     <p>{t.age}: <span>{age}</span></p>
                   </div>
                   <div className="info-item AboutPadd-15">
-                    <p>{t.website}: <span><a href="https://wizt-jaegger.github.io/portafolio-website/" target="_blank" rel="noopener noreferrer">My Portfolio</a></span></p>
+                    <p>{t.website}: <span><a href="https://emireyes.com" target="_blank" rel="noopener noreferrer">emireyes.com</a></span></p>
                   </div>
                   <div className="info-item AboutPadd-15">
                     <p>{t.email}: <span>vilfront@gmail.com</span></p>
