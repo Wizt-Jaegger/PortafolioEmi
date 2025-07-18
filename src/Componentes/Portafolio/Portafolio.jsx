@@ -28,7 +28,7 @@ const Portafolio = () => {
     { href: "https://www.youtube.com/watch?v=QKqrrb_dqAI&ab_channel=Gixarde3", src: portfolio5 },
     { href: "https://jardin-sorelu.pages.dev/", src: portfolio6 },
     { href: "https://pa-tours.pages.dev/", src: portfolio8 },
-    { href: "https://guess-number-sandy.vercel.app/", src: portfolio7 },
+    { href: "https://gestion-tareas.pages.dev/", src: portfolio7 },
   ];
 
   return (
