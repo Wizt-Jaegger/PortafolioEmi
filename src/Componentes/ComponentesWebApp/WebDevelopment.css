@@ -1,0 +1,386 @@
+/* --- Unique Experience Section Styles (Prefix: ue-) --- */
+/* --- Carousel Wrapper --- */
+.ue-carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 40px; /* Space for arrows */
+}
+
+/* --- Navigation Buttons (Arrows) --- */
+.ue-nav-btn {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #00c9c3;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.ue-nav-btn:hover {
+    background: #00c9c3;
+    color: #000;
+    transform: scale(1.1);
+}
+
+.ue-nav-btn.left { left: 0; }
+.ue-nav-btn.right { right: 0; }
+
+/* --- Scroll Container (Hidden Scrollbar) --- */
+.ue-carousel-no-bar {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 100%;
+    padding-bottom: 10px;
+    
+    /* Hide scrollbar for Chrome/Safari/Opera */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.ue-carousel-no-bar::-webkit-scrollbar {
+    display: none;
+}
+
+/* --- Card Sizing Logic (2 cards at a time) --- */
+.ue-card-fixed-size {
+    /* Formula: (100% width - gap) / 2 cards */
+    flex: 0 0 calc(50% - 10px); 
+    min-width: calc(50% - 10px);
+}
+
+/* Responsive: 1 Card on Mobile */
+@media (max-width: 768px) {
+    .ue-card-fixed-size {
+        flex: 0 0 100%;
+        min-width: 100%;
+    }
+    .ue-carousel-wrapper {
+        padding: 0; /* Remove side padding on mobile */
+    }
+    .ue-nav-btn {
+        display: none; /* Often better to just swipe on mobile */
+    }
+}
+
+/* Responsive: 3 Cards on Large Screens */
+@media (min-width: 1400px) {
+    .ue-card-fixed-size {
+        flex: 0 0 calc(33.333% - 14px);
+        min-width: calc(33.333% - 14px);
+    }
+}
+
+/* --- Image Standardization --- */
+.ue-img-wrapper-standard {
+    width: 100%;
+    height: 250px; /* Fixed Height for alignment */
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ue-img-standard {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fills box without stretching */
+    transition: transform 0.5s ease;
+}
+
+/* Zoom effect on hover */
+.ue-card:hover .ue-img-standard {
+    transform: scale(1.05);
+}
+
+.ue-img-wrapper-standard:hover .ue-zoom-overlay {
+    opacity: 1;
+}
+/* Section Wrapper */
+.ue-section {
+    padding: 20px 0 60px 0;
+    background: transparent; /* Completely transparent as requested */
+    width: 100%;
+}
+
+.ue-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Subtitles/Descriptions under the main Titulo */
+.ue-subtitle-wrapper {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.ue-description {
+    color: #aaaaaa; /* Muted text */
+    font-size: 1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* --- Card Base Styles --- */
+.ue-card {
+    background-color: rgba(252, 252, 252, 0.2); /* Translucent dark */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    backdrop-filter: blur(5px); /* Glass effect */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Card Hover Effects */
+.ue-card:hover {
+    transform: translateY(-5px);
+    border-color: #00c9c3; /* Primary Color */
+    box-shadow: 0 10px 30px rgba(0, 201, 195, 0.15);
+    background-color: rgba(210, 208, 208, 0.1);
+}
+
+/* Card Content Area */
+.ue-card-content {
+    padding: 25px;
+    flex-grow: 1;
+}
+
+/* Card Typography (Scoped) */
+.ue-card-title {
+    color: #ffffff;
+    font-size: 1.25rem;
+    margin: 0 0 10px 0;
+    font-weight: 600;
+}
+
+.ue-card-text {
+    color: #bbbbbb;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* --- Images & Media (Standard Cards) --- */
+.ue-img-wrapper {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ue-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Standard card image zoom on hover */
+.ue-card:hover .ue-img {
+    transform: scale(1.05);
+}
+
+/* Icons */
+.ue-icon {
+    font-size: 2.5rem;
+    color: #0dd0fc; /* Secondary Color */
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+/* --- Layouts --- */
+
+/* Layout A: Carousel (Horizontal Scroll) */
+.ue-carousel {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    padding: 10px 5px 30px 5px;
+    scroll-snap-type: x mandatory;
+}
+
+.ue-carousel .ue-card {
+    min-width: 320px; /* Force width for carousel items */
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+}
+
+/* Scrollbar styling for Carousel */
+.ue-carousel::-webkit-scrollbar {
+    height: 6px;
+}
+.ue-carousel::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.05);
+}
+.ue-carousel::-webkit-scrollbar-thumb {
+    background: #00c9c3; /* Primary Color */
+    border-radius: 3px;
+}
+
+/* Layout B: Grid (Standard responsive grid) */
+.ue-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* Layout C: Feature List (Flex Row inside Card) */
+.ue-feature-row {
+    display: flex;
+    align-items: flex-start;
+}
+
+.ue-feature-icon-box {
+    margin-right: 15px;
+    font-size: 2rem;
+    line-height: 1;
+    color: #00c9c3; 
+}
+
+/* --- NEW: Expandable Card Styles (The Accordion) --- */
+
+/* The container for the image that starts hidden */
+.ue-expandable-img-wrapper {
+    width: 100%;
+    /* Start completely closed */
+    max-height: 0; 
+    opacity: 0;
+    overflow: hidden;
+    position: relative; /* Needed for absolute positioning of overlay */
+    /* Smooth transition for opening/closing */
+    transition: max-height 0.5s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.4s ease;
+    border-bottom: 1px solid transparent;
+    cursor: zoom-in; /* Indicates image is clickable for zoom */
+}
+
+/* The image inside the expandable wrapper */
+.ue-expandable-img-wrapper img {
+    width: 100%;
+    height: 220px; /* Set a fixed height for the revealed image */
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease; /* Smooth zoom transition */
+}
+
+/* FIX: Only zoom the image when hovering specifically over the image wrapper */
+.ue-expandable-img-wrapper:hover img {
+    transform: scale(1.1);
+}
+
+/* THE MAGIC STATE: When the card has the 'expanded' class */
+.ue-card.expanded .ue-expandable-img-wrapper {
+    /* Expand to the image's height */
+    max-height: 220px; 
+    opacity: 1;
+    /* Reveal separator line */
+    border-bottom-color: rgba(255, 255, 255, 0.1); 
+}
+
+/* Optional: Make expanded card slightly brighter */
+.ue-card.expanded {
+    background-color: rgba(255, 254, 254, 0.2);
+    border-color: #00c9c3;
+    box-shadow: 0 10px 30px rgba(0, 201, 195, 0.2);
+}
+
+/* Ensure interactive cards have a pointer cursor */
+.ue-card-interactive {
+    cursor: pointer;
+}
+
+/* --- Zoom Overlay Hint --- */
+.ue-zoom-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* Let clicks pass through to the wrapper */
+}
+
+/* Show overlay only when hovering the image wrapper inside an expanded card */
+.ue-card.expanded .ue-expandable-img-wrapper:hover .ue-zoom-overlay {
+    opacity: 1;
+}
+
+/* --- NEW: FULL SCREEN MODAL STYLES --- */
+.ue-fullscreen-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark backdrop */
+    z-index: 9999; /* On top of everything */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: ueFadeIn 0.3s ease forwards;
+    padding: 20px;
+}
+
+.ue-fullscreen-content {
+    position: relative;
+    max-width: 95vw; /* Limit width */
+    max-height: 95vh; /* Limit height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    animation: ueScaleUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.ue-fullscreen-content img {
+    /* Ensures image keeps aspect ratio but fits screen */
+    max-width: 100%;
+    max-height: 90vh; 
+    object-fit: contain; 
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+/* Close Button */
+.ue-fullscreen-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.ue-fullscreen-close:hover {
+    transform: scale(1.1);
+    color: #ff5555;
+}
+
+/* Animations */
+@keyframes ueFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes ueScaleUp {
+    from { transform: scale(0.9); }
+    to { transform: scale(1); }
+}

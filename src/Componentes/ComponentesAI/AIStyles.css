@@ -1,0 +1,134 @@
+/* src/components/css/AIStyles.css */
+
+/* --- AI Section Styles (Prefix: ai-) --- */
+
+/* --- Layout --- */
+.ai-section {
+    padding: 60px 0;
+    width: 100%;
+    background: transparent;
+}
+
+.ai-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.ai-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.ai-title {
+    color: #00c9c3; /* Brand Primary (Teal) */
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    font-family: 'Courier New', Courier, monospace; 
+    font-weight: 700;
+}
+
+.ai-subtitle {
+    color: #aaaaaa;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* --- Grid --- */
+.ai-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* --- Cards --- */
+.ai-card {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 22px;
+    padding: 25px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+}
+
+.ai-card:hover {
+    border-color: #00c9c3;
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(0, 201, 195, 0.15);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Neural Node Decoration */
+.ai-card::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 8px;
+    height: 8px;
+    background-color: #0dd0fc;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #0dd0fc;
+    opacity: 0.6;
+}
+
+.ai-icon-box {
+    margin-bottom: 20px;
+    color: #0dd0fc; /* Brand Blue */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, rgba(0,201,195,0.1), rgba(13,208,252,0.1));
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.ai-card h4 {
+    color: #ffffff;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.ai-card p {
+    color: #cccccc;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* --- Data Lists --- */
+.ai-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.ai-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: #bbbbbb;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.ai-list li:last-child {
+    border-bottom: none;
+}
+
+.ai-list li svg {
+    margin-right: 12px;
+    color: #00c9c3;
+    min-width: 16px;
+}

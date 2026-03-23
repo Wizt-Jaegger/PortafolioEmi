@@ -1,0 +1,159 @@
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.gallery-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(8, 71, 98, 0.6), rgba(6, 229, 245, 0.8)); 
+    color: #fff;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    transition: opacity 0.3s ease;
+    font-size: 1.3rem;
+    border-radius: 25px;
+}
+
+.gallery-item:hover .gallery-description {
+    opacity: 1;
+}
+
+.galeria, .habilidades {
+    margin: 80px auto;
+    width: 90%;
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05); 
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/*----------- Estilos del Modal -------------*/
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease; /* Animación para que aparezca suavemente */
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.close-button {
+    display: none;
+}
+
+/*----------- Media Queries -------------*/
+
+@media (max-width: 800px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .gallery img {
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+/* Update your existing .gallery-description class to use flex-direction and gap */
+.gallery-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(8, 71, 98, 0.6), rgba(6, 229, 245, 0.8)); 
+    color: #fff;
+    opacity: 0;
+    display: flex;
+    flex-direction: column; /* Stacks the text and indicator vertically */
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Adds breathing room between description and indicator */
+    padding: 10px;
+    text-align: center;
+    transition: opacity 0.3s ease;
+    font-size: 1.3rem;
+    border-radius: 25px;
+}
+
+/* ADD THESE NEW CLASSES ANYWHERE IN YOUR CSS FILE */
+
+.desc-text {
+    padding: 0 10px;
+}
+
+.click-indicator {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 8px 18px;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    /* This triggers the subtle pulsing animation */
+    animation: pulseRing 1.5s infinite;
+}
+
+/* The keyframes for the pulse effect */
+@keyframes pulseRing {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}

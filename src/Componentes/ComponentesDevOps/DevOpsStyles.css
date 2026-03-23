@@ -1,0 +1,109 @@
+/* src/components/css/DevOpsStyles.css */
+
+/* --- Layout & Typography --- */
+.do-section {
+    padding: 60px 0;
+    width: 100%;
+}
+
+.do-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.do-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.do-title {
+    color: #00c9c3; /* Brand Primary (Teal) */
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    font-family: 'Courier New', Courier, monospace; /* Terminal vibe */
+}
+
+.do-subtitle {
+    color: #aaaaaa;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* --- Card Grid --- */
+.do-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* --- Tech Cards (Terminal Style) --- */
+.do-card {
+    background-color: rgba(249, 247, 247, 0.2);
+    border: none;
+    border-radius: 22px;
+    padding: 25px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.do-card:hover {
+    border-color: #00c9c3; /* Brand Primary (Teal) */
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 201, 195, 0.2); /* Teal Shadow */
+}
+
+/* "Terminal Header" visual decoration */
+.do-card::before {
+    content: "root@system:~#";
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 0.7rem;
+    color: #555;
+    font-family: monospace;
+}
+
+.do-icon-box {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color: #0dd0fc; /* Secondary Brand Color (Blue) */
+}
+
+.do-card h4 {
+    color: #fff;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.do-card p {
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* --- List Styles (for Scripts/Tools) --- */
+.do-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.do-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    color: #bbb;
+    display: flex;
+    align-items: center;
+}
+
+.do-list li svg {
+    margin-right: 10px;
+    color: #00c9c3; /* Brand Primary (Teal) */
+}
