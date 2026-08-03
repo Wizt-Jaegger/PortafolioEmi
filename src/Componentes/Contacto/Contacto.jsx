@@ -8,7 +8,7 @@ import { useLanguage } from "../../LanguageContext";
 
 const translations = {
     es: {
-        title: "Envíanos un mensaje",
+        title: "Enviame un mensaje",
         description: "Tómate la libertad de contactarnos por medio de este formulario. Tu retroalimentación, preguntas y sugerencias son importantes para nosotros.",
         name: "Nombre:",
         namePlaceholder: "Ingresa tu nombre",
@@ -27,7 +27,7 @@ const translations = {
     },
     en: {
         title: "Send us a message",
-        description: "Feel free to contact us through this form. Your feedback, questions, and suggestions are important to us.",
+        description: "Feel free to contact me through this form. Your feedback, questions, and suggestions are important to us.",
         name: "Name:",
         namePlaceholder: "Enter your name",
         phone: "Phone:",
@@ -149,10 +149,10 @@ const Contacto = () => {
                 <h3>{t.title} <img src={msg_icon} alt="msg icon" /></h3>
                 <p>{t.description}</p>
                 <ul>
-                    <li><img src={mail_icon} alt="mail" />rglo210933@upemor.edu.mx</li>
-                    <li><img src={phone_icon} alt="phone" />+52 777-990-4960</li>
+                    <li><img src={mail_icon} alt="mail" />emi@emireyes.com</li>
+                    <li><img src={phone_icon} alt="phone" />+52 777-793-4454</li>
                     <li><img src={location_icon} alt="location" />
-                        Boulevard Cuauhnáhuac #566, Col. Lomas del Texcal, Jiutepec<br />
+                        Cuernavaca, Morelos, MX.<br />
                         {t.location}
                     </li>
                 </ul>
